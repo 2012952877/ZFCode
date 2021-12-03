@@ -12,12 +12,12 @@ jobs:
   - task: Bash@3
     displayName: Install python requirement
     inputs:
-      filePath: ZF-new/Setup/install_requirements.sh
+      filePath: ZFnew/Setup/install_requirements.sh
       workingDirectory: ZF-new/Setup
   - task: PythonScript@0
     displayName: CI Training Process
     inputs:
-      scriptPath: ZF-new/CodesScripts/CI-process.py
+      scriptPath: ZFnew/CodesScripts/CI-process.py
       arguments: --dataset_name bddata
-      workingDirectory: ZF-new/CodesScripts
+      workingDirectory: ZFnew/CodesScripts
 ...
