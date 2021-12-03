@@ -1,0 +1,14 @@
+
+dependencies:
+- python=3.6.2
+- scikit-learn
+- pip:
+  - azureml-defaults
+  - azureml-dataset-runtime
+  - inference-schema[numpy-support]
+  - torch==1.9.1
+  - h5py==3.1.0
+  - progressbar>=2.5
+  - matplotlib
+  - torchvision
+  - joblib
