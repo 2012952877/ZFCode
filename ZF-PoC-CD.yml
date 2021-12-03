@@ -13,7 +13,7 @@ jobs:
     displayName: Install python requirement
     inputs:
       filePath: ZFnew/Setup/install_requirements.sh
-      workingDirectory: ZF-new/Setup
+      workingDirectory: ZFnew/Setup
   - task: PythonScript@0
     displayName: CD Inference process
     inputs:
