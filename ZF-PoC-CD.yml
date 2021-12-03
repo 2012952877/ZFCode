@@ -1,0 +1,22 @@
+jobs:
+- job: Job_1
+  displayName: Agent job 1
+  pool:
+    vmImage: ubuntu-18.04
+  steps:
+  - checkout: self
+  - task: UsePythonVersion@0
+    displayName: Use Python 3.6
+    inputs:
+      versionSpec: 3.6
+  - task: Bash@3
+    displayName: Install python requirement
+    inputs:
+      filePath: ZF-new/Setup/install_requirements.sh
+      workingDirectory: ZF-new/Setup
+  - task: PythonScript@0
+    displayName: CD Inference process
+    inputs:
+      scriptPath: ZF-new/CodesScripts/CD-process.py
+      workingDirectory: ZF-new/CodesScripts
+...
