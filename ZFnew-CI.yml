@@ -10,14 +10,14 @@ jobs:
     inputs:
       versionSpec: 3.6
   - task: Bash@3
-    displayName: Install python requirement
+    displayName: Install Bash Requirement
     inputs:
-      filePath: ZFnew/Setup/install_requirements.sh
-      workingDirectory: ZFnew/Setup
+      filePath: Setup/install_requirements.sh
+      workingDirectory: Setup
   - task: PythonScript@0
     displayName: CI Training Process
     inputs:
-      scriptPath: ZFnew/CodesScripts/CI-process.py
+      scriptPath: CodesScripts/CI-process.py
       arguments: --dataset_name bddata
-      workingDirectory: ZFnew/CodesScripts
+      workingDirectory: CodesScripts
 ...
